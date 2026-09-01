@@ -16,7 +16,7 @@ public class KafkaConsumerService {
     private String serverEmail;
 
     // Lắng nghe hòm thư "user-registration-topic"
-    @KafkaListener(topics = "user-registration-topic", groupId = "group-email")
+    @KafkaListener(topics = "user-registration-email", groupId = "group-email")
     public void listenRegistrationEvent(String userEmail) {
         System.out.println("[Consumer] Đang chuẩn bị gửi mail cho: " + userEmail);
 
